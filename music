@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti ♡</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #050505, #1b0b29, #08050c);
+      color: #eee1f7;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .contenedor {
+      max-width: 600px;
+      padding: 35px 25px;
+      background: rgba(12, 8, 17, 0.9);
+      border: 1px solid #59366d;
+      border-radius: 18px;
+      box-shadow: 0 0 35px #321640;
+    }
+
+    h1 {
+      color: #c69ae8;
+      font-size: 38px;
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 18px;
+      white-space: pre-line;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 25px;
+      background: #351b46;
+      color: white;
+      border: 1px solid #b58ad8;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #59316e;
+    }
+
+    #reproductor {
+      display: none;
+      margin-top: 25px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      border: 1px solid #59366d;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="contenedor">
+    <h1>Para ti ♡</h1>
+
+    <p>
+Hay cosas que a veces no sé cómo decirte,
+así que quiero dedicarte esta canción.
+
+Aunque no siempre encuentre las palabras,
+quiero que sepas que eres alguien especial
+y que me hace feliz tenerte en mi vida.
+
+Esta pequeña página es para ti. ♡
+    </p>
+
+    <button onclick="iniciarCancion()">
+      ♡ Entrar y escuchar
+    </button>
+
+    <div id="reproductor">
+      <p>Esta canción es para ti ♫</p>
+
+      <iframe
+        id="youtube"
+        src="about:blank"
+        title="Canción dedicada"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+
+  <script>
+    // Pega aquí el ID de tu canción de YouTube.
+    const ID_CANCION = "PON_AQUI_EL_ID";
+
+    function iniciarCancion() {
+      if (ID_CANCION === "Bx7rX0ybYvE") {
+        alert("Primero agrega el ID de tu canción de YouTube.");
+        return;
+      }
+
+      document.getElementById("reproductor").style.display = "block";
+
+      document.getElementById("youtube").src =
+        "https://www.youtube.com/embed/" +
+        ID_CANCION +
+        "?autoplay=1&rel=0";
+    }
+  </script>
+</body>
+</html>
