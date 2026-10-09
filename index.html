@@ -2,205 +2,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para ti ♡</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meimei ☠</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #eeeeee;
+      font-family: Georgia, serif;
+      text-align: center;
+      margin: 0;
+    }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  padding: 30px 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:
-    radial-gradient(ellipse at top, #321641 0%, transparent 60%),
-    linear-gradient(135deg, #050505, #160b20, #08050c);
-  color: #800020;
-  font-family: Georgia, serif;
-  overflow-x: hidden;
-}
+    header {
+      padding: 25px 10px;
+      color: #8b0000;
+      font-size: 28px;
+      letter-spacing: 4px;
+    }
 
-.calavera {
-  position: fixed;
-  color: #808080;
-  opacity: 0.65;
-  font-size: 38px;
-  pointer-events: none;
-  animation: flotar 4s ease-in-out infinite;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 15px;
+      border-bottom: 1px solid #800020;
+    }
 
-.c1 { top: 8%; left: 8%; }
-.c2 { top: 18%; right: 9%; animation-delay: 1s; }
-.c3 { bottom: 12%; left: 12%; animation-delay: 2s; }
-.c4 { bottom: 8%; right: 10%; animation-delay: 0.5s; }
-.c5 { top: 48%; left: 3%; font-size: 25px; }
-.c6 { top: 55%; right: 4%; font-size: 25px; }
+    nav button {
+      background: #1a1a1a;
+      color: #ffb6c1;
+      border: 1px solid #800020;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-family: inherit;
+    }
 
-@keyframes flotar {
-  0%, 100% { transform: translateY(0) rotate(-5deg); }
-  50% { transform: translateY(-12px) rotate(5deg); }
-}
+    nav button:hover,
+    nav button.active {
+      background: #800020;
+      color: white;
+    }
 
-.contenedor {
-  position: relative;
-  width: 100%;
-  max-width: 650px;
-  padding: 35px 25px;
-  text-align: center;
-  background: rgba(12, 8, 17, 0.92);
-  border: 1px solid #59366d;
-  border-radius: 18px;
-  box-shadow: 0 0 35px #321640;
-}
+    main {
+      max-width: 700px;
+      margin: 35px auto;
+      padding: 20px;
+      min-height: 250px;
+    }
 
-h1 {
-  color: #c69ae8;
-  font-size: clamp(30px, 7vw, 42px);
-}
+    .page { display: none; }
+    .page.active { display: block; }
 
-.subtitulo {
-  color: #a88ab9;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
+    h2 { color: #c71585; }
 
-.decoracion {
-  color: #b58ad8;
-  font-size: 23px;
-  margin: 20px 0;
-}
+    .skulls {
+      font-size: 28px;
+      letter-spacing: 12px;
+      margin: 25px 0;
+    }
 
-.mensaje {
-  color: #eee1f7;
-  font-size: 18px;
-  line-height: 1.9;
-  white-space: pre-line;
-  overflow-wrap: anywhere;
-}
-
-.firma {
-  color: #c69ae8;
-  font-style: italic;
-  margin-top: 25px;
-}
-
-button {
-  margin-top: 25px;
-  padding: 14px 25px;
-  background: #351b46;
-  color: white;
-  border: 1px solid #b58ad8;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #59316e;
-}
-
-#reproductor {
-  display: none;
-  margin-top: 25px;
-}
-
-iframe {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 16 / 9;
-  border: 1px solid #59366d;
-  border-radius: 10px;
-}
-
-.nota {
-  color: #8f7c9b;
-  font-size: 12px;
-  margin-top: 25px;
-}
-</style>
+    a { color: #ff69b4; }
+  </style>
 </head>
 
 <body>
 
-<!-- CALAVERAS DECORATIVAS -->
-<div class="calavera c1">☠</div>
-<div class="calavera c2">💀</div>
-<div class="calavera c3">💀</div>
-<div class="calavera c4">☠</div>
-<div class="calavera c5">✦</div>
-<div class="calavera c6">✧</div>
+  <header>☠ LAYN&MEI ☠</header>
 
-<main class="contenedor">
+  <div class="skulls">💀 ☠ 💀</div>
 
-  <div class="subtitulo">✦ UN PEQUEÑO ESPACIO PARA TI ✦</div>
+  <nav>
+    <button class="active" data-page="inicio">Inicio</button>
+    <button data-page="cartas">Cartas</button>
+    <button data-page="musica">Música</button>
+    <button data-page="galeria">Galería</button>
+  </nav>
 
-  <h1>♡Para la mei♡</h1>
+  <main>
+    <section id="inicio" class="page active">
+      <h2>Nuestro mundo u.u</h2>
+      <p>Un pequeño rincón para ambos los dos.</p>
+      <p>♡ hecho con amor ♡</p>
+    </section>
 
-  <div class="decoracion">☠ ── ♡ ── ☠</div>
+    <section id="cartas" class="page">
+      <h2>Cartas para ti o tuyas</h2>
+      <p>Quiero guardar aquí todas las palabras que no quiero olvidar.</p>
+      <section id="cartas" class="page">
+  <h2>Cartas para Mei ♡</h2>
 
-  <!-- CAMBIA ESTE TEXTO POR TU DEDICATORIA -->
-  <div class="mensaje">
-para mei de yo mismo
-Nos conocimos hace poco y me encariñe contigo
-muy rapido espero sigamos conociendonos.
+  <iframe
+    src="carta/index.html"
+    width="100%"
+    height="600"
+    style="border: none;">
+  </iframe>
+</section>
 
-Espero y esto pueda expresar un poco de todo
-lo que siento por ti.
+    <section id="musica" class="page">
+      <h2>Música</h2>
+      <p>Mis canciones para tu.</p>
+      <p>Agrega aquí tu reproductor de música.</p>
+    </section>
 
-Pero quería hacer algo pequeño,
-algo que fuera solamente tuyo.
+    <section id="galeria" class="page">
+      <h2>Nuestros recuerdos</h2>
+      <p>Aquí puedes agregar fotos, dibujos y recuerdos.</p>
+    </section>
+  </main>
 
-Entre tantas canciones y tantas palabras,
-hay una persona en la que pienso,
-y esa persona eres tú. ♡
-  </div>
+  <div class="skulls">☠ 💀 ☠</div>
 
-  <div class="firma">Con cariño, para mei :3. ♡</div>
+  <script>
+    const buttons = document.querySelectorAll("nav button");
+    const pages = document.querySelectorAll(".page");
 
-  <button onclick="iniciarCancion()">
-    ♡ Puchale play
-  </button>
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        pages.forEach(page => page.classList.remove("active"));
+        buttons.forEach(btn => btn.classList.remove("active"));
 
-  <div id="reproductor">
-    <p>♫ Esta canción es para ti ♫</p>
+        document.getElementById(button.dataset.page)
+          .classList.add("active");
 
-    <iframe
-      id="youtube"
-      src="about:blank"
-      title="Canción dedicada"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <div class="nota">HECHO CON ♡ Y UN POCO DE MI CEREBRO JE</div>
-
-</main>
-
-<script>
-// ID DE TU CANCIÓN DE YOUTUBE
-const ID_CANCION = "Bx7rX0ybYvE";
-
-function iniciarCancion() {
-  document.getElementById("reproductor").style.display = "block";
-
-  document.getElementById("youtube").src =
-    "https://www.youtube-nocookie.com/embed/" +
-    ID_CANCION +
-    "?autoplay=1&rel=0";
-
-  document.getElementById("reproductor").scrollIntoView({
-    behavior: "smooth",
-    block: "nearest"
-  });
-}
-</script>
+        button.classList.add("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
+
