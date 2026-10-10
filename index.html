@@ -116,12 +116,120 @@
       
 <div class="galeria">
   <img src="yodemei1.jpg" alt="img 1">
+  
+<button class="like-btn" data-foto="foto1">
+  ♡ Me gusta <span class="contador">0</span>
+</button>
+   <style>
+.like-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #111;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #292929;
+  border-color: #aaa;
+}
+
+.like-btn.liked {
+  color: #ff6b81;
+  border-color: #ff6b81;
+}
+
+.like-btn .contador {
+  margin-left: 5px;
+}
+      </style>
+
+<script>
+document.querySelectorAll(".like-btn").forEach(btn => {
+  const clave = "like_" + btn.dataset.foto;
+  const contador = btn.querySelector(".contador");
+
+  let likes = localStorage.getItem(clave) === "true";
+
+  function actualizar() {
+    btn.classList.toggle("liked", likes);
+    btn.firstChild.textContent = likes ? "♥ Me gusta " : "♡ Me gusta ";
+    contador.textContent = likes ? "1" : "0";
+  }
+
+  btn.addEventListener("click", () => {
+    likes = !likes;
+    localStorage.setItem(clave, likes);
+    actualizar();
+  });
+
+  actualizar();
+});
+</script>
 </div>
       
 <div class="galeria">
   <img src="yodemei2.jpg" alt="img2">
+  
+<button class="like-btn" data-foto="foto1">
+  ♡ Me gusta <span class="contador">0</span>
+</button>
+     <style>
+.like-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #111;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #292929;
+  border-color: #aaa;
+}
+
+.like-btn.liked {
+  color: #ff6b81;
+  border-color: #ff6b81;
+}
+
+.like-btn .contador {
+  margin-left: 5px;
+}
+      </style>
+  
+<script>
+document.querySelectorAll(".like-btn").forEach(btn => {
+  const clave = "like_" + btn.dataset.foto;
+  const contador = btn.querySelector(".contador");
+
+  let likes = localStorage.getItem(clave) === "true";
+
+  function actualizar() {
+    btn.classList.toggle("liked", likes);
+    btn.firstChild.textContent = likes ? "♥ Me gusta " : "♡ Me gusta ";
+    contador.textContent = likes ? "1" : "0";
+  }
+
+  btn.addEventListener("click", () => {
+    likes = !likes;
+    localStorage.setItem(clave, likes);
+    actualizar();
+  });
+
+  actualizar();
+});
+</script>
 </div>
-      
+      <style>
 /* Contenedor principal */
 .seccion-galeria {
   padding: 30px 20px;
@@ -190,6 +298,7 @@
     max-width: 280px;
   }
 }
+        </style>
     </section>
   </main>
 
