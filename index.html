@@ -113,6 +113,83 @@
     <section id="galeria" class="page">
       <h2>Nuestros recuerdos</h2>
       <p>Aquí puedes agregar fotos, dibujos y recuerdos.</p>
+      
+<div class="galeria">
+  <img src="yodemei1.jpg" alt="img 1">
+</div>
+      
+<div class="galeria">
+  <img src="yodemei2.jpg" alt="img2">
+</div>
+      
+/* Contenedor principal */
+.seccion-galeria {
+  padding: 30px 20px;
+  text-align: center;
+  color: #d0d0d0;
+}
+
+/* Título */
+.seccion-galeria h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #c0c0c0;
+  text-shadow: 0 0 10px #555;
+}
+
+/* Cuadrícula de fotos */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Tarjeta de la foto */
+.foto {
+  width: 250px;
+  padding: 12px;
+  background: #111111;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.foto:hover {
+  transform: scale(1.05);
+  border-color: #999999;
+  box-shadow: 0 0 18px rgba(180, 180, 180, 0.3);
+}
+
+/* Imagen */
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #444444;
+}
+
+/* Texto debajo de la foto */
+.foto p {
+  margin: 12px 0 2px;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .seccion-galeria {
+    padding: 20px 10px;
+  }
+
+  .foto {
+    width: 100%;
+    max-width: 280px;
+  }
+}
     </section>
   </main>
 
