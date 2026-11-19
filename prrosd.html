@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perrito de azotea</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at top, #321641 0%, transparent 60%),
+    linear-gradient(135deg, #050505, #160b20, #08050c);
+  color: #800020;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+.calavera {
+  position: fixed;
+  color: #808080;
+  opacity: 0.65;
+  font-size: 38px;
+  pointer-events: none;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+.c1 { top: 8%; left: 8%; }
+.c2 { top: 18%; right: 9%; animation-delay: 1s; }
+.c3 { bottom: 12%; left: 12%; animation-delay: 2s; }
+.c4 { bottom: 8%; right: 10%; animation-delay: 0.5s; }
+.c5 { top: 48%; left: 3%; font-size: 25px; }
+.c6 { top: 55%; right: 4%; font-size: 25px; }
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+.contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  padding: 35px 25px;
+  text-align: center;
+  background: rgba(12, 8, 17, 0.92);
+  border: 1px solid #59366d;
+  border-radius: 18px;
+  box-shadow: 0 0 35px #321640;
+}
+
+h1 {
+  color: #c69ae8;
+  font-size: clamp(30px, 7vw, 42px);
+}
+
+.subtitulo {
+  color: #a88ab9;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.decoracion {
+  color: #b58ad8;
+  font-size: 23px;
+  margin: 20px 0;
+}
+
+.mensaje {
+  color: #eee1f7;
+  font-size: 18px;
+  line-height: 1.9;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.firma {
+  color: #c69ae8;
+  font-style: italic;
+  margin-top: 25px;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 25px;
+  background: #351b46;
+  color: white;
+  border: 1px solid #b58ad8;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #59316e;
+}
+
+
+
+iframe {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #59366d;
+  border-radius: 10px;
+}
+
+.nota {
+  color: #8f7c9b;
+  font-size: 12px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CALAVERAS DECORATIVAS -->
+<div class="calavera c1">☠</div>
+<div class="calavera c2">💀</div>
+<div class="calavera c3">💀</div>
+<div class="calavera c4">☠</div>
+<div class="calavera c5">✦</div>
+<div class="calavera c6">✧</div>
+
+<main class="contenedor">
+
+ 
+
+  <h1>no es para ti ni nadie solo quiero expresar mi sentir contigo</h1>
+
+  <div class="decoracion">☠ ── ♡ ── ☠</div>
+
+  <!-- CAMBIA ESTE TEXTO POR TU DEDICATORIA -->
+  <div class="mensaje">
+No busco la redención
+Mucho menos tu perdón
+No busco ser absuelto
+Solo exiliar mi lamento
+
+Despojos de un vil soñador
+Sobras para complacerte a ti
+Tomame y desechame tan pronto puedas
+Tan pronto tu apetito este saciado
+
+Y vuelve a ocultarme
+en tus lobregos rincones de indiferencia
+O matame y oculta la evidencia
+Te juro no guardar rencor pues
+parte del pacto es
+
+Tu calor nunca me sera correspondido
+Tu nunca te fijaras en mi sangre
+Sangre fria, fetida que no arde
+Mis restos no reconocidos por nadie
+
+Sempiterna melancolia bajo tus justos grilletes
+Insondable delirio de tortura
+Mas mi redencion sera este escrito
+Este lugrube sentimiento
+Yacera putrefacto mi razonamiento
+Yacera mi voluntad al fin muerta
+No soy el martir tan solo 
+    Una maldita alma abyecta.
+    
+    
+  </div>
+
+
+</main>
